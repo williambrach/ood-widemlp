@@ -1,0 +1,152 @@
+[
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The plaintiff filed a motion for summary judgment alleging breach of contract."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The court upheld the precedent established in the landmark case."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The defendant was acquitted of all charges due to insufficient evidence."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "Legal counsel advised filing an appeal within the statutory time limit."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The prosecution presented compelling evidence during cross-examination."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "Class action lawsuits require certification before proceeding to trial."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The judge issued an injunction prohibiting further construction on the property."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "Both parties agreed to binding arbitration instead of litigation."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The statute of limitations has expired on this claim."
+    },
+    {
+      "label": 0,
+      "domain": "law",
+      "text": "The jury returned a unanimous verdict in favor of the defendant."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The patient was diagnosed with Type 2 diabetes following elevated HbA1c levels."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The nurse administered the prescribed medication according to protocol."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "Annual mammograms are recommended for women over 40 for early detection."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The surgeon performed a successful laparoscopic appendectomy."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "Physical therapy was prescribed for rehabilitation following knee replacement."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The pediatrician recommended a vaccination schedule for the infant."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "Blood pressure readings were consistently elevated despite medication."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The MRI revealed a small lesion requiring further investigation."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The patient was referred to a cardiologist for suspected arrhythmia."
+    },
+    {
+      "label": 1,
+      "domain": "healthcare",
+      "text": "The clinical trial showed promising results for the experimental treatment."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The quarterly earnings report exceeded analyst expectations."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "Diversification of investment portfolios reduces overall market risk."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The company issued corporate bonds to finance the expansion project."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The merger resulted in significant cost synergies for both entities."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "Inflation rates rose due to increasing consumer demand and supply constraints."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The stock market declined sharply following the central bank's announcement."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "Investors rebalanced their portfolios ahead of the fiscal year end."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The cryptocurrency exchange reported a security breach affecting user accounts."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "Tax-advantaged retirement accounts offer long-term growth potential."
+    },
+    {
+      "label": 2,
+      "domain": "finance",
+      "text": "The hedge fund leveraged derivatives to hedge against market volatility."
+    }
+  ]
