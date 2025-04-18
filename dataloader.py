@@ -31,7 +31,7 @@ def get_eval_datasets() -> dict:
 
     # Load OLID dataset
     olid_splits = {"train": "train.csv", "test": "test.csv"}
-    olid_df = pd.read_csv("hf://datasets/christophsonntag/OLID/" + olid_splits["train"])
+    olid_df = pd.read_csv("hf://datasets/christophsonntag/OLID/" + olid_splits["test"])
     olid_df = olid_df.rename(columns={"cleaned_tweet": "prompt"})
     olid_df["label"] = 0
     olid_df = olid_df[["prompt", "label"]]
@@ -52,7 +52,7 @@ def get_eval_datasets() -> dict:
     # Load TUKE Slovak dataset
     tuke_sk_splits = {"train": "train.json", "test": "test.json"}
     tuke_sk_df = pd.read_json(
-        "hf://datasets/TUKE-KEMT/hate_speech_slovak/" + tuke_sk_splits["train"],
+        "hf://datasets/TUKE-KEMT/hate_speech_slovak/" + tuke_sk_splits["test"],
         lines=True,
     )
     tuke_sk_df = tuke_sk_df.rename(columns={"text": "prompt"})
@@ -61,13 +61,6 @@ def get_eval_datasets() -> dict:
     tuke_sk_df = tuke_sk_df.dropna(subset=["prompt"])
     tuke_sk_df = tuke_sk_df[tuke_sk_df["prompt"].str.strip() != ""]
 
-    # Load DKK dataset
-    dkk = pd.read_parquet("data/test-00000-of-00001.parquet")
-    dkk = dkk.rename(columns={"text": "prompt"})
-    dkk = dkk[dkk["label"] == "OFF"].reset_index(drop=True)
-    dkk["label"] = 0
-    dkk = dkk.dropna(subset=["prompt"])
-    dkk = dkk[dkk["prompt"].str.strip() != ""]
 
     dkk_all = pd.read_parquet("data/test-00000-of-00001.parquet")
     dkk_all = dkk_all.rename(columns={"text": "prompt"})
@@ -75,13 +68,30 @@ def get_eval_datasets() -> dict:
     dkk_all = dkk_all.dropna(subset=["prompt"])
     dkk_all = dkk_all[dkk_all["prompt"].str.strip() != ""]
 
+    splits = {'train': 'data/train-00000-of-00001.parquet', 'test': 'data/test-00000-of-00001.parquet'}
+    web_questions = pd.read_parquet("hf://datasets/Stanford/web_questions/" + splits["test"])
+
+    web_questions['prompt'] = web_questions['question']
+    web_questions['label'] = 0
+    web_questions['dataset'] = 'web_questions'
+    web_questions = web_questions[['prompt', 'label']]
+
+    splits = {'train': 'data/train-00000-of-00001-7ebb9cdef03dd950.parquet', 'test': 'data/test-00000-of-00001-fbd3905b045b12b8.parquet'}
+    ml_questions = pd.read_parquet("hf://datasets/mjphayes/machine_learning_questions/" + splits["test"])
+
+    ml_questions['prompt'] = ml_questions['question']
+    ml_questions['label'] = 0
+    ml_questions['dataset'] = 'machine_learning_questions'
+    ml_questions = ml_questions[['prompt', 'label']]
+
     datasets = {
         "jigsaw": jigsaw_df,
         "olid": olid_df,
         "hate_xplain": hate_xplain,
         "tuke_sk": tuke_sk_df,
-        "dkk": dkk,
-        "dkk_all": dkk_all,
+        "dkk": dkk_all,
+        "web_questions": web_questions,
+        "ml_questions": ml_questions,
     }
     return datasets
 
