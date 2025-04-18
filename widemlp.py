@@ -64,9 +64,9 @@ def prepare_inputs_optimized(
     input_ids: list[list[int]], device: str = None
 ) -> tuple[torch.LongTensor, torch.LongTensor]:
     """WILLIAMs TRY TO optimize prepare_inputs using torch operations."""
-    lens = torch.LongTensor([len(doc) for doc in input_ids])
+    lens = torch.LongTensor([len(doc) for doc in input_ids]).to(device)
     offsets = torch.cumsum(lens, dim=0) - lens
-    flat_inputs = torch.cat([torch.LongTensor(doc) for doc in input_ids])
+    flat_inputs = torch.cat([torch.tensor(doc) for doc in input_ids])
 
     if device is not None:
         offsets = offsets.to(device)
