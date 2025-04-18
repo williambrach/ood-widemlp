@@ -1,5 +1,5 @@
 ft_bert 2.py
-
+.*pt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
