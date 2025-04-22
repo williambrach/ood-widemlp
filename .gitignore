@@ -1,4 +1,5 @@
 ft_bert 2.py
+data/mlp/
 .*pt
 # Byte-compiled / optimized / DLL files
 __pycache__/

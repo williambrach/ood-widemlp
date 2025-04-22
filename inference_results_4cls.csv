@@ -1,7 +1,0 @@
-dataset_name,model_type,accuracy,precision,recall,f1,true_positives,false_positives,false_negatives,true_negatives
-jigsaw,4cls,0.0,0.0,0.0,0.0,0,3214,0,0
-olid,4cls,0.0,0.0,0.0,0.0,0,13170,0,0
-hate_xplain,4cls,0.0,0.0,0.0,0.0,0,5935,0,0
-tuke_sk,4cls,0.0,0.0,0.0,0.0,0,8625,0,0
-dkk,4cls,0.0,0.0,0.0,0.0,0,41,0,0
-dkk_all,4cls,0.0,0.0,0.0,0.0,0,329,0,0

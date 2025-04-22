@@ -67,6 +67,7 @@ def prepare_inputs_optimized(
     lens = torch.LongTensor([len(doc) for doc in input_ids]).to(device)
     offsets = torch.cumsum(lens, dim=0) - lens
     flat_inputs = torch.cat([torch.tensor(doc) for doc in input_ids])
+    # flat_inputs = torch.cat([doc for doc in input_ids])
 
     if device is not None:
         offsets = offsets.to(device)

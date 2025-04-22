@@ -152,5 +152,5 @@ def get_train_datasets(dataset_size: int, seed: int, split: float) -> dict:
     combined_dataset = concatenate_datasets([law_data, finance_data, healthcare_data])
 
     # Split into train and test sets using dataset's train_test_split method
-    data = combined_dataset.train_test_split(test_size=0.2, seed=seed)
+    data = combined_dataset.train_test_split(test_size=split, seed=seed)
     return data
